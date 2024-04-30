@@ -1,5 +1,9 @@
 # Pixagram
+![Logo](public/assets/images/logo.svg)
+<br>
 Your goto Social Media App
+<hr>
+
 ![Home](public/readme/home.png)
 
 ## Tech Stack Used:
