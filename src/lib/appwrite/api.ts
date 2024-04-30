@@ -134,7 +134,6 @@ export async function createPost(post: INewPost) {
 
     // Convert tags into array
     const tags = post.tags?.replace(/ /g, "").split(",") || [];
-    const ImageLink = `https://cloud.appwrite.io/v1/storage/buckets/662fb3700024367a041e/files/${uploadedFile.$id}/view?project=662f9cee0016872bbbff&mode=admin`
 
     // Create post
     const newPost = await databases.createDocument(
@@ -144,7 +143,7 @@ export async function createPost(post: INewPost) {
       {
         creator: post.userId,
         caption: post.caption,
-        imageUrl: ImageLink,
+        imageUrl: fileUrl,
         imageId: uploadedFile.$id,
         location: post.location,
         tags: tags,
